@@ -31,7 +31,7 @@
     }
 
     .img-container {
-        content: url(/images/image-product-desktop.jpg);
+        content: url(../images/image-product-desktop.jpg);
         max-height: fit-content;
         padding: 0;
         margin: 0;
@@ -149,7 +149,7 @@
 
 
     .img-container {
-        content: url(/images/image-product-mobile.jpg) !important;
+        content: url(../images/image-product-mobile.jpg) !important;
         min-width: 100%;
     }
 
