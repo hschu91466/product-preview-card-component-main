@@ -1,0 +1,165 @@
+@mixin centerCenter {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    background: $neutralWhite;
+    color: $neutralDarkBlue;
+    position: fixed;
+    max-height: 75vh;
+    @include centerCenter();
+    border-radius: 20px;
+    overflow: hidden;
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        max-height: 80dvh;
+    }
+    .contents {
+        padding: 1.2em 1.2em;
+        flex: 1;
+    }
+
+    .text-container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .img-container {
+        content: url(/images/image-product-desktop.jpg);
+        max-height: fit-content;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cart-btn {
+        font-family: $secondaryFont;
+        background: $primaryColor;
+        color: $neutralWhite;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid $primaryColor;
+        height: 4em;
+        font-weight: 700;
+
+        &:hover {
+            background: $activeColor;
+        }
+
+        &:focus {
+            background: $activeColor;
+        }
+
+        .cart-img {
+            margin-right: 15px;
+        }
+
+    }
+
+    .top-text {
+        font-family: $secondaryFont;
+        color: $neutralDarkGrayBlue;
+        text-transform: uppercase;
+        letter-spacing: .3em;
+        font-size: 1.5vw;
+    }
+
+    .card-title {
+        font-family: $primaryFont;
+        font-weight: 700;
+        font-size: 2.5vw;
+        //margin-right: 15px;
+        line-height: 1;
+    }
+
+    .card-text {
+        font-family: $secondaryFont;
+        color: $neutralDarkGrayBlue;
+        font-weight: 500;
+        font-size: 1.5vw;
+        line-height: 1.5;
+    }
+
+    .price {
+        line-height: 1.5;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+
+        .current-price {
+            color: $primaryColor;
+            font-family: $primaryFont;
+            font-size: 2.5vw;
+        }
+
+        .previous-price {
+            font-family: $secondaryFont;
+            color: $neutralDarkGrayBlue;
+            text-decoration: line-through;
+            font-size: 1em;
+            margin-left: 20px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    .card {
+        position: relative;
+        max-height: 100vh;
+        .contents {
+            padding: 0;
+                }
+        .top-text {
+            font-size: .75em;
+        }
+
+        .card-title {
+            font-size: 2em;
+        }
+
+        .card-text {
+            font-size: 1em;
+        }
+        .price {
+            line-height: 1.5;
+            vertical-align: middle;
+    
+            .current-price {
+                font-size: 2em;
+            }
+    
+            .previous-price {
+                font-size: 1em;
+            }
+        }
+
+    }
+
+    .card-body {
+        display:flex;
+
+    }
+
+
+    .img-container {
+        content: url(/images/image-product-mobile.jpg) !important;
+        min-width: 100%;
+    }
+
+    .text-container {
+        min-width: 100%;
+    }
+
+    .contents {
+        margin: 2px;
+        padding: 2px;
+    }
+
+}

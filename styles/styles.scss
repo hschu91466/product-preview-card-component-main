@@ -1,0 +1,22 @@
+@import "./_variables";
+@import "./_card";
+
+body {
+    background: $primaryCream;    
+}
+p {
+    font-size: 14px;
+}
+
+.container {
+    height: 95vh;
+}
+
+.attribution { 
+font-size: 11px; text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+

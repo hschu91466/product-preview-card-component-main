@@ -1,0 +1,36 @@
+.card {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(212deg, 21%, 14%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.card button {
+  background: hsl(158deg, 36%, 37%);
+  color: hsl(0deg, 0%, 100%);
+}
+.card button:hover {
+  background: hsl(228deg, 12%, 48%);
+}
+
+body {
+  background: hsl(30deg, 38%, 92%);
+  color: red;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}/*# sourceMappingURL=styles.css.map */
